@@ -4,7 +4,7 @@
 %define develname %mklibname -d %name
 
 Name:           schroedinger
-Version:        1.0.3
+Version:        1.0.5
 Release:        %mkrel 1
 Summary:        Portable libraries for the high quality Dirac video codec
 
