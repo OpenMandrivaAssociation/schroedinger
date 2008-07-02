@@ -11,8 +11,7 @@ Summary:        Portable libraries for the high quality Dirac video codec
 Group:          Video
 License:        LGPL/MIT/MPL
 URL:            http://schrodinger.sourceforge.net/
-Source0:        http://diracvideo.schleef.org/download/schroedinger/schroedinger-%{version}.tar.gz
-#Source0:        http://download.sourceforge.net/%{name}/%{name}-%{version}.tar.gz
+Source0:        http://www.diracvideo.org/download/schroedinger/schroedinger-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-
 
 BuildRequires:  liboil-devel >= 0.3.13
