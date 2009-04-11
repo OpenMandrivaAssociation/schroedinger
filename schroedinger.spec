@@ -62,7 +62,7 @@ GStreamer Plugins that implement Dirac video encoding and decoding
 %setup -q
 
 %build
-%configure --disable-static --enable-gtk-doc
+%configure2_5x --disable-static --enable-gtk-doc
 %make
 
 %install
