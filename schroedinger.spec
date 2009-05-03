@@ -4,7 +4,7 @@
 %define develname %mklibname -d %name
 
 Name:           schroedinger
-Version:        1.0.5
+Version:        1.0.6
 Release:        %mkrel 1
 Summary:        Portable libraries for the high quality Dirac video codec
 
@@ -14,7 +14,7 @@ URL:            http://www.diracvideo.org/
 Source0:        http://www.diracvideo.org/download/schroedinger/schroedinger-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-
 
-BuildRequires:  liboil-devel >= 0.3.13
+BuildRequires:  liboil-devel >= 0.3.16
 BuildRequires:  libgstreamer-plugins-base-devel >= 0.10
 BuildRequires:  gtk-doc
 
