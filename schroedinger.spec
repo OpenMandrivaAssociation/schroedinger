@@ -4,7 +4,7 @@
 %define develname %mklibname -d %name
 
 Name:           schroedinger
-Version:        1.0.7
+Version:        1.0.8
 Release:        %mkrel 1
 Summary:        Portable libraries for the high quality Dirac video codec
 
@@ -15,7 +15,6 @@ Source0:        http://www.diracvideo.org/download/schroedinger/schroedinger-%{v
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-
 
 BuildRequires:  liboil-devel >= 0.3.16
-BuildRequires:  libgstreamer-plugins-base-devel >= 0.10
 BuildRequires:  gtk-doc
 
 %description
@@ -51,13 +50,6 @@ Provides: lib%name-devel = %{version}-%{release}
 %description -n %develname
 Development files for schrodinger
 
-%package -n gstreamer0.10-schroedinger
-Group:          Video
-Summary:        GStreamer Plugins that implement Dirac video encoding and decoding
-
-%description -n gstreamer0.10-schroedinger
-GStreamer Plugins that implement Dirac video encoding and decoding
-
 %prep
 %setup -q
 
@@ -68,7 +60,6 @@ GStreamer Plugins that implement Dirac video encoding and decoding
 %install
 rm -rf %{buildroot}
 %makeinstall_std
-rm -f %buildroot%{_libdir}/gstreamer-0.10/libgstschro.la
 
 %clean
 rm -rf %{buildroot}
@@ -93,8 +84,3 @@ rm -rf %{buildroot}
 %{_libdir}/*.so
 %{_libdir}/*.la
 %{_libdir}/pkgconfig/schroedinger-%{abi}.pc
-
-%files -n gstreamer0.10-schroedinger
-%defattr(-,root,root,-)
-%{_libdir}/gstreamer-0.10/libgstschro.so
-
