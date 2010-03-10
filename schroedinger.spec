@@ -4,7 +4,7 @@
 %define develname %mklibname -d %name
 
 Name:           schroedinger
-Version:        1.0.8
+Version:        1.0.9
 Release:        %mkrel 1
 Summary:        Portable libraries for the high quality Dirac video codec
 
@@ -12,9 +12,10 @@ Group:          Video
 License:        LGPL/MIT/MPL
 URL:            http://www.diracvideo.org/
 Source0:        http://www.diracvideo.org/download/schroedinger/schroedinger-%{version}.tar.gz
+Patch0: schroedinger-1.0.9-fix-linking.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-
 
-BuildRequires:  liboil-devel >= 0.3.16
+BuildRequires:  liborc-devel
 BuildRequires:  gtk-doc
 
 %description
@@ -52,6 +53,8 @@ Development files for schrodinger
 
 %prep
 %setup -q
+%apply_patches
+autoreconf -fi
 
 %build
 %configure2_5x --disable-static --enable-gtk-doc
@@ -60,6 +63,9 @@ Development files for schrodinger
 %install
 rm -rf %{buildroot}
 %makeinstall_std
+
+%check
+make check
 
 %clean
 rm -rf %{buildroot}
