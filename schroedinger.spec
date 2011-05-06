@@ -5,7 +5,7 @@
 
 Name:           schroedinger
 Version:        1.0.10
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        Portable libraries for the high quality Dirac video codec
 
 Group:          Video
