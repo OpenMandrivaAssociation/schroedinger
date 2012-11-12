@@ -1,0 +1,12 @@
+diff -p -up schroedinger-1.0.9/testsuite/Makefile.am.0000 schroedinger-1.0.9/testsuite/Makefile.am
+--- schroedinger-1.0.9/testsuite/Makefile.am.0000	2010-01-04 02:06:54.000000000 +0100
++++ schroedinger-1.0.9/testsuite/Makefile.am	2010-03-10 12:04:36.000000000 +0100
+@@ -102,7 +102,7 @@ wavelet_noise_2d_SOURCES = wavelet_noise
+ phasecorrelation_SOURCES = phasecorrelation.c
+ 
+ #motion_CFLAGS = $(SCHRO_CFLAGS)
+-#motion_LDADD = $(SCHRO_LIBS)
++motion_LDADD = $(SCHRO_LIBS) -lorc-test-0.4
+ motion_SOURCES = motion.c
+ 
+ #motion2_CFLAGS = $(SCHRO_CFLAGS)
