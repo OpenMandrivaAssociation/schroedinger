@@ -1,2 +1,4 @@
+removed_sources:
+  schroedinger-1.0.10.tar.gz: c8af4cb2bc54b7783ac20d7f4a39db4e31c1cac0
 sources:
-  "schroedinger-1.0.10.tar.gz": c8af4cb2bc54b7783ac20d7f4a39db4e31c1cac0
+  schroedinger-1.0.11.tar.gz: c01ee0bed6c1bd7608763927f719f94ebc6aaa41

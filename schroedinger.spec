@@ -4,17 +4,25 @@
 %define develname %mklibname -d %{name}
 
 Name:		schroedinger
-Version:	1.0.10
-Release:	6
+Version:	1.0.11
+Release:	1
 Summary:	Portable libraries for the high quality Dirac video codec
 Group:		Video
 License:	LGPL/MIT/MPL
 URL:		http://www.diracvideo.org/
 Source0:	http://www.diracvideo.org/download/schroedinger/schroedinger-%{version}.tar.gz
 Patch0:		schroedinger-1.0.9-fix-linking.patch
+Patch1:		schroedinger-automake-1.13.patch
 
 BuildRequires:	pkgconfig(orc-0.4)
 BuildRequires:	gtk-doc
+
+%track
+prog %name = {
+	URL = http://www.diracvideo.org/download/schroedinger/
+	version = %version
+	regex = %name-(__VER__)\.tar\.gz
+}
 
 %description
 The Schrödinger project will implement portable libraries for the high
