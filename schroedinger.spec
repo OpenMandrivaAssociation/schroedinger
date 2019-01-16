@@ -51,28 +51,26 @@ Provides:	lib%{name}-devel = %{version}-%{release}
 Development files for schrodinger
 
 %prep
-%setup -q
-%apply_patches
+%autosetup -p1
 autoreconf -fi
 
 %build
 %configure \
 	--disable-static \
-	--enable-gtk-doc
-%make
+	--disable-gtk-doc
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %check
 make check
 
 %files -n %{libname}
-%doc COPYING* NEWS TODO
 %{_libdir}/libschroedinger-%{abi}.so.%{major}*
 
 %files -n %{develname}
-%doc %{_datadir}/gtk-doc/html/schroedinger
+%doc COPYING* NEWS TODO
 %{_includedir}/schroedinger-%{abi}
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/schroedinger-%{abi}.pc
