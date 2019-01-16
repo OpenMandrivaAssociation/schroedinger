@@ -58,6 +58,7 @@ autoreconf -fi
 %configure \
 	--disable-static \
 	--disable-gtk-doc
+
 %make_build
 
 %install
@@ -71,6 +72,7 @@ make check
 
 %files -n %{develname}
 %doc COPYING* NEWS TODO
+%doc %{_datadir}/gtk-doc/html/%{name}
 %{_includedir}/schroedinger-%{abi}
 %{_libdir}/*.so
 %{_libdir}/pkgconfig/schroedinger-%{abi}.pc
