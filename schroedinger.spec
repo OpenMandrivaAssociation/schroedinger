@@ -64,9 +64,6 @@ autoreconf -fi
 %install
 %make_install
 
-%check
-make check
-
 %files -n %{libname}
 %{_libdir}/libschroedinger-%{abi}.so.%{major}*
 
