@@ -9,7 +9,7 @@ Release:	19
 Summary:	Portable libraries for the high quality Dirac video codec
 Group:		Video
 License:	LGPL/MIT/MPL
-URL:		http://www.diracvideo.org/
+URL:		https://www.diracvideo.org/
 Source0:	http://www.diracvideo.org/download/schroedinger/schroedinger-%{version}.tar.gz
 Patch0:		schroedinger-1.0.9-fix-linking.patch
 Patch1:		schroedinger-automake-1.13.patch
