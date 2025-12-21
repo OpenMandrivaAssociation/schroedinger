@@ -14,6 +14,11 @@ Source0:	http://www.diracvideo.org/download/schroedinger/schroedinger-%{version}
 Patch0:		schroedinger-1.0.9-fix-linking.patch
 Patch1:		schroedinger-automake-1.13.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(orc-0.4)
 BuildRequires:	gtk-doc
 
